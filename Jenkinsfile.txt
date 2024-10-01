@@ -4,7 +4,7 @@ node ('agentik'){
 		checkout scm
 	}
 	stage('Build-and-Tag'){
-		app = docker.build("DVZakharov/sudoku")
+		app = docker.build("dvzakharov/sudoku")
 	}
 	stage('Post-to-dockerhub'){
 		docker.withRegistry('https://registry.hub.docker.com','dockerhub_creds'){
